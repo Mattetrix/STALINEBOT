@@ -1,7 +1,7 @@
 
+const Discord = require('discord.js');
 const bot = new Discord.Client();
 const prefix - "URSS."
-bot.login(process.env.TOKEN)
 
 bot.on('message', msg => {
     if (msg.content.toLowerCase().startsWith(prefix + 'ping' )) {
@@ -18,3 +18,4 @@ bot.on('message', msg => {
     guildMember.createDM("https://discord.gg/YYgYZDn")
   }
 });
+bot.login(process.env.TOKEN);
