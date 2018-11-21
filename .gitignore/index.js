@@ -44,10 +44,7 @@ bot.on('message', msg => {
         msg.channel.send("https://fr.wikipedia.org/wiki/Union_des_républiques_socialistes_soviétiques")
        
     }
-    if (content.startsWith(prefix + "time")) {
-        let daysofweek = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi" ]
-        msg.channel.send(daysofweek[(new Date ).getDay()])
-    }
+   
     if (content.startsWith(prefix + "roulette russe")) {
         msg.channel.send("Et c'est ..." + Math.floor(Math.random() * 6 + 1)
     if (msg.content == "Et c'est ... 6" )
