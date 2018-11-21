@@ -8,10 +8,7 @@ bot.on('ready', function () {
     bot.user.setActivity('Drinking Vodka').catch(console.error)
 });
 
-bot.on('message', msg => {
-    if (msg.content.toLowerCase().startsWith(prefix + 'ping' )) {
-        msg.channel.send('Pong !');
-    })
+
     bot.on('message', message => {
 
   if (message.content.startsWith('URSS.play')) {
