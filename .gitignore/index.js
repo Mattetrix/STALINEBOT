@@ -1,15 +1,35 @@
-
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const prefix - "URSS."
+const prefix = ("URSS.");
+
+
+
 
 bot.on('ready', function () {
-    console.log("Login success")
+    console.log("Je suis prêt à être utilisé.")
     bot.user.setActivity('Drinking Vodka').catch(console.error)
 });
+    
+
+bot.on('message', message => {
+    if (message.content === 'rebootexec') {
+      message.reply('Reboot exécuté ! Le bot va redemarrer !')
+       message.reply('Le BOT à redémarré !')
+    }
+  })
 
 
-    bot.on('message', message => {
+bot.on('guildMemberAdd', member => {
+  member.createDM().then(channel => {
+    return channel.send('Bienvenue sur le serveur Albert de Mun' + member.displayName)
+  }).catch(console.error)
+    
+    
+
+   
+})
+
+bot.on('message', message => {
 
   if (message.content.startsWith('URSS.play')) {
     // On récupère le premier channel audio du serveur
@@ -37,12 +57,15 @@ bot.on('ready', function () {
   }
 
 })
-  bot.on('message', message => {
-
-  if (msg.content === prefix + "site"){
-        msg.channel.send("https://fr.wikipedia.org/wiki/Union_des_républiques_socialistes_soviétiques")
-       
-    }
   
+
+
+bot.on('message', msg => {
+    if (msg.content === prefix + "site"){
+        msg.channel.send("https://fr.wikipedia.org/wiki/Union_des_républiques_socialistes_soviétiques")
+        console.log("Un camarade en plus")
+    }
+
 });
+
 bot.login(process.env.TOKEN);
