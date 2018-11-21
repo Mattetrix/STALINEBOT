@@ -43,13 +43,6 @@ bot.on('ready', function () {
         msg.channel.send("https://fr.wikipedia.org/wiki/Union_des_républiques_socialistes_soviétiques")
        
     }
-   bot.on('message', message => {
-
-    if (content.startsWith(prefix + "roulette russe")) {
-        msg.channel.send("Et c'est ..." + Math.floor(Math.random() * 6 + 1)
-    if (msg.content == "Et c'est ... 6" )
-    else guildMember.kick
-    guildMember.createDM("https://discord.gg/YYgYZDn")
-  }
+  
 });
 bot.login(process.env.TOKEN);
