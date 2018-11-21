@@ -37,11 +37,14 @@ bot.on('ready', function () {
   }
 
 })
+  bot.on('message', message => {
+
   if (msg.content === prefix + "site"){
         msg.channel.send("https://fr.wikipedia.org/wiki/Union_des_républiques_socialistes_soviétiques")
        
     }
-   
+   bot.on('message', message => {
+
     if (content.startsWith(prefix + "roulette russe")) {
         msg.channel.send("Et c'est ..." + Math.floor(Math.random() * 6 + 1)
     if (msg.content == "Et c'est ... 6" )
